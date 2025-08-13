@@ -3,578 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdMeLux.com - The Ecosystem for Visionary Brands</title>
-    
-    <!-- Tailwind CSS -->
+    <title>Growth Engine — Systematic Marketing & Sales for B2B</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Inter & Playfair Display Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Base page style */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827; /* Dark Gray */
-            color: #d1d5db; /* Light Gray Text */
         }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
+        .gradient-text {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        /* Hero section gradient */
-        .hero-gradient {
-            background: radial-gradient(ellipse at top, #1f2937, #111827);
-        }
-        /* Button style */
         .cta-button {
             transition: all 0.3s ease;
         }
         .cta-button:hover {
             transform: translateY(-2px);
-            filter: brightness(1.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        /* Fade-in animation */
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
+        .package-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .package-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        /* Custom accent color */
-        .accent-gold {
-            color: #f59e0b; /* Amber 500 */
+        .highlight-package {
+             border: 2px solid #3b82f6;
+             position: relative;
+             overflow: hidden;
         }
-        .bg-accent-gold {
-            background-color: #f59e0b;
-        }
-        .border-accent-gold {
-            border-color: #f59e0b;
+        .highlight-badge {
+            position: absolute;
+            top: 15px;
+            right: -45px;
+            background-color: #3b82f6;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 12px;
+            font-weight: 600;
         }
     </style>
 </head>
-<body class="text-gray-300">
+<body class="bg-gray-50 text-gray-800">
 
-    <div id="admelux-landing">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">
+                Growth Engine<span class="text-blue-600">.</span>
+            </h1>
+            <a href="#packages" class="cta-button bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 hidden sm:block">
+                View Packages
+            </a>
+        </div>
+    </header>
 
-        <!-- ===== Section 1: Hero ===== -->
-        <header class="hero-gradient">
-            <div class="container mx-auto px-6 py-24 md:py-32 lg:py-40">
-                <div class="max-w-4xl mx-auto text-center fade-in">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-                        The Global Ecosystem for Visionary Brands
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10">
-                        An exclusive, verified network for pioneers in artisanal tech, sustainable luxury, and neo-wellness to connect, transact, and grow with confidence.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="#demo" class="cta-button bg-accent-gold text-gray-900 font-bold py-3 px-8 rounded-lg text-lg shadow-lg shadow-amber-500/20">
-                            Request an Invitation
-                        </a>
-                        <a href="#problems" class="cta-button bg-gray-800 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-700">
-                            Explore the Ecosystem
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- ===== Section 2: Problems (Reframed for Premium) ===== -->
-        <section id="problems" class="py-16 md:py-24 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">For Brands That Refuse to Compromise</h2>
-                    <p class="text-gray-400 text-lg">In a world of mass production, visionary brands face unique challenges. Standard solutions are not enough when your product is exceptional.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Problem Card 1 -->
-                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 fade-in" style="animation-delay: 0.1s;">
-                        <div class="text-amber-400 rounded-lg w-12 h-12 flex items-center justify-center mb-5">
-                            <i data-lucide="gem" class="w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Preserving Brand Integrity</h3>
-                        <p class="text-gray-400">The wrong partner can dilute your brand's prestige. Finding distributors who share your values is paramount.</p>
-                    </div>
-                    <!-- Problem Card 2 -->
-                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 fade-in" style="animation-delay: 0.4s;">
-                        <div class="text-amber-400 rounded-lg w-12 h-12 flex items-center justify-center mb-5">
-                            <i data-lucide="shield" class="w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Global Compliance</h3>
-                        <p class="text-gray-400">Navigating the complex web of international regulations for niche products demands expert-level precision.</p>
-                    </div>
-                    <!-- Problem Card 3 -->
-                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 fade-in" style="animation-delay: 0.3s;">
-                        <div class="text-amber-400 rounded-lg w-12 h-12 flex items-center justify-center mb-5">
-                            <i data-lucide="lock" class="w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">High-Value Transactions</h3>
-                        <p class="text-gray-400">Large, cross-border deals require sophisticated financial instruments and absolute security, not just a simple checkout.</p>
-                    </div>
-                    <!-- Problem Card 4 -->
-                      <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 fade-in" style="animation-delay: 0.2s;">
-                        <div class="text-amber-400 rounded-lg w-12 h-12 flex items-center justify-center mb-5">
-                            <i data-lucide="package-check" class="w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Bespoke Logistics</h3>
-                        <p class="text-gray-400">High-value, artisanal goods require more than standard shipping. They demand white-glove service.</p>
-                    </div>                    
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Section 3: Process Comparison ===== -->
-        <section class="py-16 md:py-24 bg-gray-900/50">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The End of Compromise</h2>
-                    <p class="text-gray-400 text-lg">We replaced the fragmented, high-risk path of traditional export with a single, elegant solution.</p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                    <!-- Column 1: The Old Way -->
-                    <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700">
-                        <h3 class="text-2xl font-bold text-white mb-6 text-center">The Old Way</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3 opacity-60">
-                                <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-white">Manual Partner Search</h4>
-                                    <p class="text-sm text-gray-400">Endless searching on unreliable directories and costly trade shows.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3 opacity-60">
-                                <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-white">Lengthy Vetting</h4>
-                                    <p class="text-sm text-gray-400">Weeks spent on due diligence with high risk of fraud.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3 opacity-60">
-                                <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-white">Fragmented Communication</h4>
-                                    <p class="text-sm text-gray-400">Complex negotiations lost in endless email chains.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3 opacity-60">
-                                <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-white">Payment & Default Risk</h4>
-                                    <p class="text-sm text-gray-400">Complex international payments with high risk of non-payment.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Column 2: The AdMeLux Way -->
-                    <div class="bg-gray-800 p-8 rounded-2xl border-2 border-accent-gold">
-                        <h3 class="text-2xl font-bold accent-gold mb-6 text-center">The AdMeLux Way</h3>
-                         <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-400 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-white">AI-Curated Connections</h4>
-                                    <p class="text-sm text-gray-400">Instantly connect with ideal, pre-vetted partners who align with your brand.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-400 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-white">Instant Trust</h4>
-                                    <p class="text-sm text-gray-400">All members are rigorously KYB-verified for your absolute security.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-400 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-white">Unified Deal Room</h4>
-                                    <p class="text-sm text-gray-400">Communicate, negotiate, and sign deals in one secure space.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-400 flex-shrink-0 mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-white">Secure Escrow Payments</h4>
-                                    <p class="text-sm text-gray-400">Funds are held securely until both parties are satisfied.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== NEW Section 4: For Brands & Distributors ===== -->
-        <section class="py-16 md:py-24 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                    <!-- For Visionary Brands -->
-                    <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700">
-                        <h3 class="text-sm font-semibold text-amber-400 mb-2">FOR VISIONARY BRANDS</h3>
-                        <h2 class="text-3xl font-bold text-white mb-4">Present Your Craft to a Global Audience & Generate Leads for Your Business</h2>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400"></i><span>Access a curated network of high-end buers and distributors.</span></li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400"></i><span>Maintain brand prestige and control.</span></li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400"></i><span>Simplify your entire export operation.</span></li>
-                        </ul>
-                        <div class="bg-gray-900/50 p-4 rounded-xl border border-gray-700">
-                             <div class="flex items-center gap-4">
-                                <img src="https://images.unsplash.com/photo-1587160982974-204134c6f9c9?q=80&w=200&auto=format&fit=crop" alt="Product Image" class="w-20 h-20 object-cover rounded-lg flex-shrink-0">
-                                <div>
-                                    <p class="font-bold text-white">Aura Tube Amplifier</p>
-                                    <p class="text-sm text-gray-400">From: Your Brand Inc.</p>
-                                    <p class="text-lg font-bold accent-gold mt-1">$4,500 / unit</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- For Curated Distributors -->
-                    <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700">
-                        <h3 class="text-sm font-semibold text-amber-400 mb-2">FOR CURATED BUYERS</h3>
-                        <h2 class="text-3xl font-bold text-white mb-4">Discover the World's Most Exceptional Products in Just a Few Clicks</h2>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400"></i><span>Source unique, verified luxury goods.</span></li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400"></i><span>Gain exclusive access to visionary brands.</span></li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400"></i><span>Transact with confidence and security.</span></li>
-                        </ul>
-                         <div class="bg-gray-900/50 p-4 rounded-xl border border-gray-700">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <p class="font-bold text-white">Kogarashi Audio</p>
-                                    <p class="text-sm text-gray-400">Tokyo, Japan</p>
-                                </div>
-                                <div class="flex items-center gap-2 text-green-400">
-                                    <i data-lucide="shield-check" class="w-5 h-5"></i>
-                                    <span class="text-sm font-semibold">Verified</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Section 5: Verification Process ===== -->
-        <section class="py-16 md:py-24 bg-gray-900/50">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
-                    <div class="lg:w-1/2 w-full">
-                        <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-2">Your Company Profile</h3>
-                            <p class="text-gray-400 mb-6">Complete your profile to join the network.</p>
-                            <div class="space-y-4">
-                                <!-- Verification Step 1 -->
-                                <div class="flex items-center gap-4 p-4 bg-gray-900/50 rounded-lg">
-                                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-green-900/50 text-green-400">
-                                        <i data-lucide="check" class="w-6 h-6"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-white">Business Registration</p>
-                                        <p class="text-sm text-gray-400">Official company documents submitted</p>
-                                    </div>
-                                </div>
-                                <!-- Verification Step 2 -->
-                                <div class="flex items-center gap-4 p-4 bg-gray-900/50 rounded-lg">
-                                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-green-900/50 text-green-400">
-                                        <i data-lucide="check" class="w-6 h-6"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-white">Financial Standing</p>
-                                        <p class="text-sm text-gray-400">Credit history and stability check</p>
-                                    </div>
-                                </div>
-                                <!-- Verification Step 3 -->
-                                <div class="flex items-center gap-4 p-4 bg-gray-900/50 rounded-lg">
-                                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-green-900/50 text-green-400">
-                                        <i data-lucide="check" class="w-6 h-6"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-white">Compliance & Sanctions</p>
-                                        <p class="text-sm text-gray-400">Screened against global watchlists</p>
-                                    </div>
-                                </div>
-                                <!-- Result -->
-                                <div class="mt-6 text-center p-4 bg-green-500 text-white rounded-lg flex items-center justify-center gap-3">
-                                    <i data-lucide="shield-check" class="w-6 h-6"></i>
-                                    <span class="text-lg font-bold">You are a Verified Partner!</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2">
-                        <div class="text-left">
-                            <div class="bg-gray-800 border border-gray-700 text-amber-400 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
-                                <i data-lucide="user-check" class="w-6 h-6"></i>
-                            </div>
-                            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Become a Trusted Partner</h2>
-                            <p class="text-gray-400 text-lg">Our mandatory KYB (Know Your Business) process is your gateway to a network of reliable companies. We conduct a multi-point verification to ensure every member meets our high standards for security and trustworthiness, so you can trade with absolute confidence.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Section 6: AI Smart Match ===== -->
-        <section class="py-16 md:py-24 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                     <div class="inline-block bg-gray-800 text-amber-400 rounded-lg p-3 mb-4 border border-gray-700">
-                        <i data-lucide="brain-circuit" class="w-8 h-8"></i>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">AI-Curated Connections</h2>
-                    <p class="text-gray-400 text-lg">Our intelligent algorithms analyze your brand's DNA to find the perfect partner. We match you on values, aesthetics, and market position, not just keywords.</p>
-                </div>
-                <div class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <!-- Left Side: Your Request -->
-                        <div>
-                            <h3 class="font-bold text-lg text-white mb-4">Your Brand Profile:</h3>
-                            <div class="space-y-3 text-sm">
-                                <div class="flex justify-between p-3 bg-gray-900/50 rounded-lg">
-                                    <span class="font-medium text-gray-400">Category:</span>
-                                    <span class="font-semibold text-white">Artisanal Tech / Audio</span>
-                                </div>
-                                <div class="flex justify-between p-3 bg-gray-900/50 rounded-lg">
-                                    <span class="font-medium text-gray-400">Target Market:</span>
-                                    <span class="font-semibold text-white">Japan</span>
-                                </div>
-                                <div class="flex justify-between p-3 bg-gray-900/50 rounded-lg">
-                                    <span class="font-medium text-gray-400">Values:</span>
-                                    <span class="font-semibold text-white">Craftsmanship, Minimalism</span>
-                                </div>
-                                <div class="flex justify-between p-3 bg-gray-900/50 rounded-lg">
-                                    <span class="font-medium text-gray-400">Looking for:</span>
-                                    <span class="font-semibold text-white">High-End Distributor</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Right Side: AI Match -->
-                        <div class="bg-gray-900/50 p-6 rounded-xl border-2 border-accent-gold">
-                             <h3 class="font-bold text-lg text-white mb-4">Top AI Match:</h3>
-                             <div class="text-center">
-                                 <div class="w-16 h-16 mx-auto rounded-full bg-white flex items-center justify-center shadow-md mb-3">
-                                     <img src="https://placehold.co/64x64/111827/f59e0b?text=K" alt="Kogarashi Audio Logo" class="rounded-full">
-                                 </div>
-                                 <p class="font-bold text-xl text-white">Kogarashi Audio</p>
-                                 <p class="text-sm text-gray-400 mb-4">Tokyo, Japan</p>
-                                 <div class="flex justify-around">
-                                     <div class="text-center">
-                                         <p class="text-2xl font-bold accent-gold">99%</p>
-                                         <p class="text-xs text-gray-400">Brand Fit</p>
-                                     </div>
-                                      <div class="text-center">
-                                         <p class="text-2xl font-bold accent-gold">97%</p>
-                                         <p class="text-xs text-gray-400">Trust Score</p>
-                                     </div>
-                                 </div>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Section 7: Communication (The Deal Room) ===== -->
-        <section class="py-16 md:py-24 bg-gray-900/50">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
-                    <div class="lg:w-1/2 w-full">
-                        <div class="bg-gray-800 p-4 sm:p-6 rounded-2xl shadow-2xl border border-gray-700">
-                            <div class="border-b border-gray-700 pb-3 mb-4">
-                                <h3 class="font-bold text-white">The Deal Room: Kogarashi Audio</h3>
-                                <p class="text-sm text-green-400 flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4"></i> Deal Finalized</p>
-                            </div>
-                            <div class="space-y-4 text-sm">
-                                <!-- Message 1 -->
-                                <div class="flex gap-3">
-                                    <img src="https://placehold.co/32x32/111827/f59e0b?text=K" alt="Kogarashi Avatar" class="flex-shrink-0 w-8 h-8 rounded-full">
-                                    <div>
-                                        <div class="bg-gray-700 p-3 rounded-lg rounded-tl-none">
-                                            <p>The Aura Amplifier is a work of art. We are honored to be considered. Please find our distribution proposal attached.</p>
-                                            <div class="flex items-center gap-2 mt-2 text-gray-400 border-t border-gray-600 pt-2">
-                                                <i data-lucide="paperclip" class="w-4 h-4"></i>
-                                                <span>Proposal_Kogarashi.pdf</span>
-                                            </div>
-                                        </div>
-                                        <p class="text-xs text-gray-500 mt-1">10:32 AM</p>
-                                    </div>
-                                </div>
-                                <!-- Message 2 -->
-                                <div class="flex justify-end gap-3">
-                                    <div>
-                                        <div class="bg-accent-gold text-gray-900 p-3 rounded-lg rounded-br-none">
-                                            <p>The proposal looks excellent. We are ready to proceed with the smart contract and initial payment via AdMeLux Escrow.</p>
-                                        </div>
-                                        <p class="text-xs text-gray-500 mt-1 text-right">10:35 AM</p>
-                                    </div>
-                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-400"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2">
-                        <div class="text-left">
-                             <div class="bg-gray-800 border border-gray-700 text-amber-400 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
-                                <i data-lucide="message-square" class="w-6 h-6"></i>
-                            </div>
-                            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The Deal Room</h2>
-                            <p class="text-gray-400 text-lg">Communicate securely, share sensitive documents, and finalize deals in a dedicated, encrypted environment. Every interaction is logged, and every agreement is backed by our smart contract and escrow system.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Section 8: Compliance & Legal ===== -->
-        <section class="py-16 md:py-24 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-                    <div class="lg:w-1/2 w-full">
-                        <div class="bg-gray-800 p-6 rounded-2xl shadow-2xl border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-4">Compliance Center</h3>
-                            <div class="space-y-4">
-                                <!-- Smart Contract Widget -->
-                                <div class="bg-gray-900/50 p-4 rounded-xl border border-gray-700">
-                                    <div class="flex items-center justify-between mb-2">
-                                        <h4 class="font-bold text-white">Smart Contract</h4>
-                                        <span class="text-xs font-semibold text-green-400 bg-green-900/50 px-2 py-1 rounded-full">Active</span>
-                                    </div>
-                                    <p class="text-sm text-gray-400 mb-3">Agreement between Your Brand and Kogarashi Audio.</p>
-                                    <div class="flex items-center gap-3 text-sm">
-                                        <i data-lucide="file-check-2" class="w-5 h-5 accent-gold"></i>
-                                        <span class="font-medium text-gray-300">Signed by both parties</span>
-                                    </div>
-                                </div>
-                                <!-- Certifications Widget -->
-                                <div class="bg-gray-900/50 p-4 rounded-xl border border-gray-700">
-                                    <h4 class="font-bold text-white mb-3">Verified Certifications</h4>
-                                    <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-gray-600">
-                                        <i data-lucide="award" class="w-5 h-5 text-amber-400"></i>
-                                        <div>
-                                            <p class="font-semibold text-sm text-white">ISO 9001:2015</p>
-                                            <p class="text-xs text-gray-500">Kogarashi Audio</p>
-                                        </div>
-                                        <a href="#" class="ml-auto accent-gold hover:underline text-sm">View</a>
-                                    </div>
-                                </div>
-                                <!-- Customs Docs Widget -->
-                                <div class="bg-gray-900/50 p-4 rounded-xl border border-gray-700">
-                                    <h4 class="font-bold text-white mb-3">Customs Documents (Auto-generated)</h4>
-                                     <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-gray-600">
-                                        <i data-lucide="file-spreadsheet" class="w-5 h-5 text-green-400"></i>
-                                        <div>
-                                            <p class="font-semibold text-sm text-white">Commercial Invoice - JP</p>
-                                            <p class="text-xs text-gray-500">For shipment #YK-TYO-001</p>
-                                        </div>
-                                        <a href="#" class="ml-auto accent-gold hover:underline text-sm">Download</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2">
-                        <div class="text-left">
-                             <div class="bg-gray-800 border border-gray-700 text-amber-400 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
-                                <i data-lucide="gavel" class="w-6 h-6"></i>
-                            </div>
-                            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Effortless Compliance</h2>
-                            <p class="text-gray-400 text-lg">AdMeLux.com simplifies the complexities of international trade law. Manage certifications, generate customs documents, and use legally-binding smart contracts—all within a secure, centralized hub. Ensure every deal is compliant, transparent, and protected.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Section 9: Integrated Services (Bespoke Console) ===== -->
-        <section id="widgets" class="py-16 md:py-24 bg-gray-900/50">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Your Bespoke Trade Console</h2>
-                    <p class="text-gray-400 text-lg">Manage white-glove logistics, high-value finance, and comprehensive insurance from a single, elegant dashboard. Our integrations with world-class partners are seamless.</p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                    <!-- Widget 1: Logistics -->
-                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 space-y-4 h-full flex flex-col">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="package-check" class="w-8 h-8 text-amber-400"></i>
-                            <h3 class="text-lg font-bold text-white">White-Glove Logistics</h3>
-                        </div>
-                        <div class="flex-grow text-center flex flex-col justify-center items-center">
-                            <p class="text-gray-400">Insured, climate-controlled shipping for high-value goods.</p>
-                            <p class="text-4xl font-extrabold text-white my-2">$3,450</p>
-                            <p class="text-sm text-gray-500">Quote from our specialized carrier network.</p>
-                        </div>
-                        <button class="w-full cta-button bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600">Arrange Shipment</button>
-                    </div>
-                    <!-- Widget 2: Finance -->
-                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 space-y-4 h-full flex flex-col">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="landmark" class="w-8 h-8 text-amber-400"></i>
-                            <h3 class="text-lg font-bold text-white">Trade Finance</h3>
-                        </div>
-                        <div class="flex-grow text-center flex flex-col justify-center items-center">
-                            <p class="text-gray-400">Deal Value</p>
-                            <p class="text-4xl font-extrabold text-white my-2">$150,000</p>
-                            <p class="text-sm text-gray-500 max-w-xs">Access financing from our premier banking partners with a single click.</p>
-                        </div>
-                        <button class="w-full cta-button bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600">Apply with 1-Click</button>
-                    </div>
-                    <!-- Widget 3: Insurance -->
-                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 space-y-4 h-full flex flex-col">
-                         <div class="flex items-center gap-4">
-                            <i data-lucide="umbrella" class="w-8 h-8 text-amber-400"></i>
-                            <h3 class="text-lg font-bold text-white">Cargo Insurance</h3>
-                        </div>
-                        <div class="flex-grow text-center flex flex-col justify-center items-center">
-                            <p class="text-gray-400">Shipment Value</p>
-                            <p class="text-4xl font-extrabold text-white my-2">$150,000</p>
-                            <p class="text-sm text-gray-500">Premium: <span class="font-bold text-white">$225.00</span> (All-Risk)</p>
-                        </div>
-                        <button class="w-full cta-button bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600">Secure Coverage</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Section 10: Call to Action (CTA) ===== -->
-        <section id="demo" class="py-16 md:py-24 bg-gray-800">
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 md:py-32 bg-white">
             <div class="container mx-auto px-6 text-center">
-                <div class="max-w-3xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Join the Vanguard of Global Trade</h2>
-                    <p class="text-gray-400 text-lg mb-10">Become part of an exclusive network built to protect and elevate visionary brands. Request your invitation to see the power of AdMeLux.com today.</p>
-                    <div class="bg-gray-900/50 rounded-lg p-2 max-w-lg mx-auto shadow-lg border border-gray-700">
-                        <form class="flex flex-col sm:flex-row gap-2">
-                            <input type="email" placeholder="Your work email" class="w-full px-4 py-3 rounded-md text-gray-300 bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
-                            <button type="submit" class="cta-button bg-accent-gold text-gray-900 font-bold py-3 px-6 rounded-md hover:bg-amber-400 w-full sm:w-auto">
-                                Request Invitation
-                            </button>
-                        </form>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                    Your Product is Brilliant. <br> Is Your <span class="gradient-text">Marketing?</span>
+                </h2>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    We help manufacturing SMEs transition from expensive trade shows and random referrals to a manageable system for customer acquisition and sales growth.
+                </p>
+                <div class="mt-10">
+                    <a href="#packages" class="cta-button bg-blue-600 text-white font-bold px-10 py-4 rounded-lg text-lg shadow-xl hover:bg-blue-700">
+                        Start with a Free Diagnostic
+                    </a>
+                    <p class="mt-4 text-sm text-gray-500">No risk. No commitment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">You're an expert in production. But does this sound familiar?</h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">This is a common pain point for the best manufacturers.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Pain Point 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center">
+                            <i data-lucide="plane-takeoff" class="w-8 h-8 text-red-500"></i>
+                            <h4 class="ml-4 text-xl font-bold">Reliance on Trade Shows</h4>
+                        </div>
+                        <p class="mt-4 text-gray-600">Huge budgets, chaotic contact management, and a low, unpredictable return on investment.</p>
+                    </div>
+                    <!-- Pain Point 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center">
+                            <i data-lucide="users" class="w-8 h-8 text-red-500"></i>
+                            <h4 class="ml-4 text-xl font-bold">Unmanageable Growth</h4>
+                        </div>
+                        <p class="mt-4 text-gray-600">Growth is based on word-of-mouth — it's slow, impossible to scale, and unpredictable.</p>
+                    </div>
+                    <!-- Pain Point 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center">
+                            <i data-lucide="wifi-off" class="w-8 h-8 text-red-500"></i>
+                            <h4 class="ml-4 text-xl font-bold">The "Digital Divide"</h4>
+                        </div>
+                        <p class="mt-4 text-gray-600">An outdated website that doesn't generate leads. A complete lack of understanding of how to use LinkedIn.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== Section 11: Footer ===== -->
-        <footer class="bg-gray-900 text-gray-500">
-            <div class="container mx-auto px-6 py-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="text-lg font-bold text-white">AdMeLux.com</div>
-                    <div class="text-center md:text-right mt-4 md:mt-0">
-                        <p>&copy; 2025 AdMeLux.com. All rights reserved.</p>
-                        <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a>
+        <!-- Solution Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <p class="font-semibold text-blue-600">OUR PHILOSOPHY</p>
+                    <h3 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">From Tools to a System. From Tactics to Strategy.</h3>
+                    <div class="flex justify-center mt-8">
+                        <div class="relative max-w-4xl text-left">
+                             <div class="absolute top-0 left-0 -mt-4 -ml-4 w-16 h-16 text-gray-200">
+                                <i data-lucide="quote" class="w-full h-full"></i>
+                            </div>
+                            <p class="text-2xl font-semibold text-gray-800 leading-relaxed">
+                                Successful marketing is <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">20% the right tools</span> and <span class="bg-green-100 text-green-800 px-2 py-1 rounded">80% the right strategy</span>. That's why our platform isn't just a set of features. It's an integrated system where every tool serves your personal growth strategy.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
+        
+        <!-- Packages Section -->
+        <section id="packages" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Choose Your Path to Manageable Growth</h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">From a free self-diagnostic to a full sales partnership.</p>
+                </div>
 
-    </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 items-start">
+                    <!-- Package 1: Starter -->
+                    <div class="package-card bg-white p-8 rounded-xl h-full flex flex-col">
+                        <h4 class="text-2xl font-bold text-gray-900">Starter</h4>
+                        <p class="text-gray-500 mt-1">Diagnostic</p>
+                        <p class="text-4xl font-extrabold text-gray-900 mt-6">Free</p>
+                        <p class="text-gray-600 mt-4 text-sm">Start with a self-analysis. Understand your starting point before charting the course.</p>
+                        <ul class="mt-8 space-y-4 text-gray-700 flex-grow">
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span>Company Profile & Directory Listing</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold">Strategic Self-Diagnostic Tool</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span>"Your Marketing Potential" Report</span></li>
+                        </ul>
+                        <a href="#" class="mt-8 cta-button w-full text-center bg-gray-200 text-gray-800 font-bold py-3 rounded-lg hover:bg-gray-300">Start for Free</a>
+                    </div>
 
-    <!-- Lucide Icons Script -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+                    <!-- Package 2: Foundation -->
+                    <div class="package-card bg-white p-8 rounded-xl h-full flex flex-col">
+                        <h4 class="text-2xl font-bold text-gray-900">Foundation</h4>
+                        <p class="text-gray-500 mt-1">Traffic</p>
+                        <p class="text-4xl font-extrabold text-gray-900 mt-6">€500<span class="text-lg font-semibold text-gray-500">/mo</span></p>
+                        <p class="text-gray-600 mt-4 text-sm">We don't just give you tools; we first develop a strategy to ensure your traffic is targeted.</p>
+                        <ul class="mt-8 space-y-4 text-gray-700 flex-grow">
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span>Everything in Starter</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span>SEO & Content Tools</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold">Competitive Analysis Module</span></li>
+                             <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold text-blue-600">Mandatory "Strategy Kickstart" with an expert (€2,500 one-time)</span></li>
+                        </ul>
+                        <a href="#" class="mt-8 cta-button w-full text-center bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700">Request a Demo</a>
+                    </div>
+
+                    <!-- Package 3: Growth -->
+                    <div class="package-card bg-white p-8 rounded-xl h-full flex flex-col highlight-package">
+                        <div class="highlight-badge">Popular</div>
+                        <h4 class="text-2xl font-bold text-gray-900">Growth</h4>
+                        <p class="text-gray-500 mt-1">Lead Generation</p>
+                        <p class="text-4xl font-extrabold text-gray-900 mt-6">€1,800<span class="text-lg font-semibold text-gray-500">/mo</span></p>
+                        <p class="text-gray-600 mt-4 text-sm">We turn your traffic into a stream of quality leads, constantly adjusting the course with an expert.</p>
+                        <ul class="mt-8 space-y-4 text-gray-700 flex-grow">
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span>Everything in Foundation</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span>Built-in CRM & Visitor ID</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold">Automatic Lead Scoring</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold text-blue-600">Quarterly Strategy Session</span></li>
+                        </ul>
+                        <a href="#" class="mt-8 cta-button w-full text-center bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700">Request a Demo</a>
+                    </div>
+
+                    <!-- Package 4: Partnership -->
+                    <div class="package-card bg-gray-900 text-white p-8 rounded-xl h-full flex flex-col">
+                        <h4 class="text-2xl font-bold">Partnership</h4>
+                        <p class="text-gray-400 mt-1">Sales</p>
+                        <p class="text-4xl font-extrabold mt-6">€3,500<span class="text-lg font-semibold text-gray-400">/mo</span></p>
+                        <p class="text-gray-300 mt-4 text-sm">We are so confident in the results that we're ready to share the financial success with you. A true partnership.</p>
+                        <ul class="mt-8 space-y-4 text-gray-200 flex-grow">
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i><span>Everything in Growth</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold">Predictive Analysis Module</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i><span>Accounting Software Integration</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold text-blue-400">Monthly session & direct expert access</span></li>
+                            <li class="flex items-start"><i data-lucide="plus-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold">3% of sales from platform leads</span></li>
+                        </ul>
+                        <a href="#" class="mt-8 cta-button w-full text-center bg-white text-gray-900 font-bold py-3 rounded-lg hover:bg-gray-200">Discuss Partnership</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                     <div class="flex justify-center mb-4">
+                        <img src="https://placehold.co/100x100/e2e8f0/4a5568?text=CEO" alt="Photo of an entrepreneur" class="rounded-full">
+                    </div>
+                    <p class="text-2xl md:text-3xl font-semibold text-gray-800 leading-snug">
+                        "From a free diagnostic to a full sales partnership—this is a clear, logical, and incredibly powerful path to growth. I'd just ask: Where do I sign?"
+                    </p>
+                    <p class="mt-6 font-bold text-gray-900">European Entrepreneur</p>
+                    <p class="text-gray-500">Owner of a manufacturing SME</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="text-center">
+                <h3 class="text-3xl font-bold">Ready to build your growth engine?</h3>
+                <p class="mt-4 text-gray-400 max-w-xl mx-auto">Start with a free diagnostic and get your personalized marketing potential report today.</p>
+                <div class="mt-8">
+                    <a href="#packages" class="cta-button bg-blue-600 text-white font-bold px-10 py-4 rounded-lg text-lg shadow-xl hover:bg-blue-700">
+                        Take the Free Diagnostic
+                    </a>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+                <p>&copy; 2025 Growth Engine. All rights reserved.</p>
+                <p class="mt-2">Built with precision and strategy for global B2B.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
-      lucide.createIcons();
+        lucide.createIcons();
     </script>
-
 </body>
 </html>
