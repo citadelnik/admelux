@@ -50,6 +50,16 @@
             font-size: 12px;
             font-weight: 600;
         }
+        /* Styles for the ROI calculator results */
+        .roi-result {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .roi-result.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -68,7 +78,7 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
+        <!-- 1. Hero Section -->
         <section class="py-20 md:py-32 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
@@ -86,7 +96,142 @@
             </div>
         </section>
 
-        <!-- Buyer Problems Section -->
+        <!-- 2. Problem Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">You're an expert in production. But does this sound familiar?</h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">This is a common pain point for Europe's best manufacturers.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center">
+                            <i data-lucide="plane-takeoff" class="w-8 h-8 text-red-500"></i>
+                            <h4 class="ml-4 text-xl font-bold">Reliance on Trade Shows</h4>
+                        </div>
+                        <p class="mt-4 text-gray-600">Huge budgets, chaotic contact management, and a low, unpredictable return on investment.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center">
+                            <i data-lucide="users" class="w-8 h-8 text-red-500"></i>
+                            <h4 class="ml-4 text-xl font-bold">Unmanageable Growth</h4>
+                        </div>
+                        <p class="mt-4 text-gray-600">Growth is based on word-of-mouth — it's slow, impossible to scale, and unpredictable.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center">
+                            <i data-lucide="wifi-off" class="w-8 h-8 text-red-500"></i>
+                            <h4 class="ml-4 text-xl font-bold">The "Digital Divide"</h4>
+                        </div>
+                        <p class="mt-4 text-gray-600">An outdated website that doesn't generate leads. A complete lack of understanding of how to use LinkedIn.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Case Studies Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Proof of Concept: Real Results for EU Manufacturers</h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Our strategy-first approach delivers measurable growth across industries.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Case Study 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                        <div class="p-8">
+                            <img src="https://placehold.co/150x40/000000/FFFFFF?text=Müller+Maschinenbau" alt="Company Logo" class="h-8 mb-4">
+                            <p class="font-semibold text-blue-600">Mechanical Engineering | Germany</p>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">Before:</h4>
+                                <p class="text-gray-600 text-sm">Entire marketing budget spent on Hannover Messe with unpredictable lead quality. No online presence.</p>
+                            </div>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">After (12 months with "Growth" package):</h4>
+                                <p class="text-gray-600 text-sm">Became a recognized online expert. Leads now come consistently through their website, reducing reliance on trade shows.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-gray-50 mt-auto">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">+250%</p>
+                                    <p class="text-sm text-gray-600">Qualified Leads</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">-40%</p>
+                                    <p class="text-sm text-gray-600">Trade Show Spend</p>
+                                </div>
+                            </div>
+                            <blockquote class="mt-6 text-center text-gray-700 italic border-l-4 border-blue-500 pl-4">
+                                "We are engineers, not marketers. Growth Engine gave us the strategy and system to finally turn our expertise into a predictable sales pipeline."
+                            </blockquote>
+                        </div>
+                    </div>
+                    <!-- Case Study 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                        <div class="p-8">
+                            <img src="https://placehold.co/150x40/000000/FFFFFF?text=Warsaw+Textiles" alt="Company Logo" class="h-8 mb-4">
+                            <p class="font-semibold text-blue-600">Fashion & Textiles | Poland</p>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">Before:</h4>
+                                <p class="text-gray-600 text-sm">90% of revenue came from two major clients. The business was extremely vulnerable.</p>
+                            </div>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">After (9 months with "Growth" package):</h4>
+                                <p class="text-gray-600 text-sm">Diversified their client base by proactively targeting mid-size fashion brands across the EU using outbound dialogues and inbound content.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-gray-50 mt-auto">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">+35%</p>
+                                    <p class="text-sm text-gray-600">New EU Clients</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">-50%</p>
+                                    <p class="text-sm text-gray-600">Revenue Dependency</p>
+                                </div>
+                            </div>
+                            <blockquote class="mt-6 text-center text-gray-700 italic border-l-4 border-blue-500 pl-4">
+                                "For the first time, we feel in control of our growth. We are no longer just order-takers; we are actively building our future."
+                            </blockquote>
+                        </div>
+                    </div>
+                    <!-- Case Study 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                        <div class="p-8">
+                            <img src="https://placehold.co/150x40/000000/FFFFFF?text=Alpine+Gifts" alt="Company Logo" class="h-8 mb-4">
+                            <p class="font-semibold text-blue-600">Niche Consumer Goods | Austria</p>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">Before:</h4>
+                                <p class="text-gray-600 text-sm">Struggling to stand out in a crowded market. Constantly pressured on price by distributors.</p>
+                            </div>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">After (12 months with "Foundation" package):</h4>
+                                <p class="text-gray-600 text-sm">Established a strong brand identity through high-quality content, attracting premium distributors and enabling direct-to-retail sales.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-gray-50 mt-auto">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">+15%</p>
+                                    <p class="text-sm text-gray-600">Profit Margin</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">Top 3</p>
+                                    <p class="text-sm text-gray-600">Google Ranking</p>
+                                </div>
+                            </div>
+                            <blockquote class="mt-6 text-center text-gray-700 italic border-l-4 border-blue-500 pl-4">
+                                "The strategic sessions were a game-changer. We stopped competing on price and started competing on value."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Buyer Problems Section -->
         <section class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -151,41 +296,8 @@
             </div>
         </section>
 
-        <!-- Problem Section -->
+        <!-- 5. Solution Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">You're an expert in production. But does this sound familiar?</h3>
-                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">This is a common pain point for Europe's best manufacturers.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <div class="flex items-center">
-                            <i data-lucide="plane-takeoff" class="w-8 h-8 text-red-500"></i>
-                            <h4 class="ml-4 text-xl font-bold">Reliance on Trade Shows</h4>
-                        </div>
-                        <p class="mt-4 text-gray-600">Huge budgets, chaotic contact management, and a low, unpredictable return on investment.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <div class="flex items-center">
-                            <i data-lucide="users" class="w-8 h-8 text-red-500"></i>
-                            <h4 class="ml-4 text-xl font-bold">Unmanageable Growth</h4>
-                        </div>
-                        <p class="mt-4 text-gray-600">Growth is based on word-of-mouth — it's slow, impossible to scale, and unpredictable.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <div class="flex items-center">
-                            <i data-lucide="wifi-off" class="w-8 h-8 text-red-500"></i>
-                            <h4 class="ml-4 text-xl font-bold">The "Digital Divide"</h4>
-                        </div>
-                        <p class="mt-4 text-gray-600">An outdated website that doesn't generate leads. A complete lack of understanding of how to use LinkedIn.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Solution Section -->
-        <section class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center">
                     <p class="font-semibold text-blue-600">OUR PHILOSOPHY</p>
@@ -204,8 +316,8 @@
             </div>
         </section>
         
-        <!-- How We Find Clients Section -->
-        <section class="py-20 bg-white">
+        <!-- 6. How We Find Clients Section -->
+        <section class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h3 class="text-3xl md:text-4xl font-bold text-gray-900">How We Find <span class="gradient-text">Your</span> Ideal Clients: Our 4-Step Process</h3>
@@ -256,8 +368,8 @@
             </div>
         </section>
 
-        <!-- AI-Powered Lead Quality Section -->
-        <section class="py-20">
+        <!-- 7. AI-Powered Lead Quality Section -->
+        <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <p class="font-semibold text-blue-600">QUALITY OVER QUANTITY</p>
@@ -341,8 +453,8 @@
                 </div>
             </div>
         </section>
-
-        <!-- Packages Section -->
+        
+        <!-- 8. Packages Section -->
         <section id="packages" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -422,7 +534,77 @@
             </div>
         </section>
 
-        <!-- Detailed Feature Comparison Section -->
+        <!-- 9. ROI Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Transparent Costs vs. Predictable ROI</h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">An example based on our popular "Growth" package.</p>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-gray-200">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                        <!-- Investment Column -->
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-900 flex items-center">
+                                <i data-lucide="coins" class="w-8 h-8 text-blue-600 mr-3"></i>
+                                Your Investment
+                            </h4>
+                            <div class="mt-6 space-y-4">
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <p class="font-semibold">One-Time "Strategy Kickstart"</p>
+                                    <p class="text-2xl font-bold text-blue-600">€1,050</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <p class="font-semibold">"Growth" Package Monthly Fee</p>
+                                    <p class="text-2xl font-bold text-blue-600">€950</p>
+                                </div>
+                                <div class="mt-6 pt-6 border-t border-gray-200">
+                                    <p class="font-bold text-lg">Total Investment (12 Months):</p>
+                                    <p class="text-3xl font-bold">€12,450</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Return & Calculator Column -->
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-900 flex items-center">
+                                <i data-lucide="calculator" class="w-8 h-8 text-green-500 mr-3"></i>
+                                Calculate Your Potential Return
+                            </h4>
+                            <div class="mt-6 space-y-4">
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <label for="deal-value-input" class="font-semibold text-gray-700">Enter your average deal value:</label>
+                                    <div class="mt-2 flex items-center">
+                                        <span class="text-gray-500 font-bold text-xl px-4 py-2 bg-gray-200 rounded-l-lg">€</span>
+                                        <input type="number" id="deal-value-input" value="25000" class="w-full p-2 text-xl font-bold border-gray-300 border-t border-b focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., 25000">
+                                        <button id="calculate-roi-btn" class="cta-button bg-blue-600 text-white font-semibold px-6 py-2 rounded-r-lg hover:bg-blue-700 text-lg">Calculate</button>
+                                    </div>
+                                </div>
+                                
+                                <div id="roi-results-container" class="space-y-4">
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                        <div class="roi-result p-4 bg-green-50 rounded-lg text-center">
+                                            <p class="font-bold text-lg text-green-800">Potential ROI</p>
+                                            <p id="roi-percentage" class="text-4xl font-extrabold text-green-600 mt-1">2,310%</p>
+                                        </div>
+                                        <div class="roi-result p-4 bg-blue-50 rounded-lg text-center">
+                                            <p class="font-bold text-lg text-blue-800">Projected Revenue</p>
+                                            <p id="projected-revenue" class="text-4xl font-extrabold text-blue-600 mt-1">€300,000</p>
+                                        </div>
+                                        <div class="roi-result p-4 bg-gray-100 rounded-lg text-center">
+                                            <p class="font-bold text-lg text-gray-800">Net Profit</p>
+                                            <p id="net-profit" class="text-4xl font-extrabold text-gray-900 mt-1">€287,550</p>
+                                        </div>
+                                    </div>
+                                    <p id="roi-calculation-details" class="roi-result text-xs text-gray-500 mt-2 text-center">*Based on a conservative estimate of 12 deals closed in the first year.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 10. Detailed Feature Comparison Section -->
         <section id="feature-comparison" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -635,186 +817,8 @@
                 </div>
             </div>
         </section>
-
-        <!-- ROI Section -->
-        <section class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Transparent Costs vs. Predictable ROI</h3>
-                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">An example based on our popular "Growth" package.</p>
-                </div>
-                <div class="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-gray-200">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                        <!-- Investment Column -->
-                        <div>
-                            <h4 class="text-2xl font-bold text-gray-900 flex items-center">
-                                <i data-lucide="coins" class="w-8 h-8 text-blue-600 mr-3"></i>
-                                Your Investment
-                            </h4>
-                            <div class="mt-6 space-y-4">
-                                <div class="p-4 bg-gray-50 rounded-lg">
-                                    <p class="font-semibold">One-Time "Strategy Kickstart"</p>
-                                    <p class="text-2xl font-bold text-blue-600">€1,050</p>
-                                </div>
-                                <div class="p-4 bg-gray-50 rounded-lg">
-                                    <p class="font-semibold">"Growth" Package Monthly Fee</p>
-                                    <p class="text-2xl font-bold text-blue-600">€950</p>
-                                </div>
-                                <div class="mt-6 pt-6 border-t border-gray-200">
-                                    <p class="font-bold text-lg">Total Investment:</p>
-                                    <p class="text-xl"><span class="font-bold">6 Months:</span> €6,750</p>
-                                    <p class="text-xl"><span class="font-bold">12 Months:</span> €12,450</p>
-                                    <div class="mt-6 p-4 bg-green-50 rounded-lg">
-                                        <p class="font-bold text-lg text-green-800">Total ROI (12-Month Projection)</p>
-                                        <p class="text-sm text-gray-600">Based on conservative industry averages*</p>
-                                        <p class="text-4xl font-extrabold text-green-600 mt-2">2,310%</p>
-                                        <p class="text-xs text-gray-500 mt-2">*Calculation: ( (12 deals x €25,000 avg. value) - €12,450 investment ) / €12,450 investment.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Return Column -->
-                        <div>
-                            <h4 class="text-2xl font-bold text-gray-900 flex items-center">
-                                <i data-lucide="bar-chart-2" class="w-8 h-8 text-green-500 mr-3"></i>
-                                Your Expected Return
-                            </h4>
-                            <div class="mt-6 space-y-6">
-                                <div>
-                                    <p class="font-bold text-lg">Months 1-3: Foundation Building</p>
-                                    <ul class="list-disc list-inside text-gray-600 mt-2">
-                                        <li>Strategy defined, ICP created</li>
-                                        <li>Trustworthy webpage launched</li>
-                                        <li>First expert content published & SEO started</li>
-                                        <li><span class="font-semibold text-green-600">Result:</span> Increased website traffic & brand visibility.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-lg">Months 4-6: Gaining Momentum</p>
-                                    <ul class="list-disc list-inside text-gray-600 mt-2">
-                                        <li>Consistent flow of inbound & outbound dialogues</li>
-                                        <li>Lead scoring system identifies hot prospects</li>
-                                        <li><span class="font-semibold text-green-600">Result:</span> 5-10 qualified leads per month & first sales meetings scheduled.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-lg">Months 7-12: Achieving Growth & ROI</p>
-                                    <ul class="list-disc list-inside text-gray-600 mt-2">
-                                        <li>Predictable lead generation pipeline</li>
-                                        <li>Optimized sales process in the CRM</li>
-                                        <li><span class="font-semibold text-green-600">Result:</span> 10+ deals closed, and a clear, positive ROI.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         
-        <!-- Case Studies Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Proof of Concept: Real Results for EU Manufacturers</h3>
-                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Our strategy-first approach delivers measurable growth across industries.</p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- Case Study 1 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
-                        <div class="p-8">
-                            <img src="https://placehold.co/150x40/000000/FFFFFF?text=Müller+Maschinenbau" alt="Company Logo" class="h-8 mb-4">
-                            <p class="font-semibold text-blue-600">Mechanical Engineering | Germany</p>
-                            <div class="mt-4">
-                                <h4 class="font-bold text-lg">Before:</h4>
-                                <p class="text-gray-600 text-sm">Entire marketing budget spent on Hannover Messe with unpredictable lead quality. No online presence.</p>
-                            </div>
-                            <div class="mt-4">
-                                <h4 class="font-bold text-lg">After (12 months with "Growth" package):</h4>
-                                <p class="text-gray-600 text-sm">Became a recognized online expert. Leads now come consistently through their website, reducing reliance on trade shows.</p>
-                            </div>
-                        </div>
-                        <div class="p-6 bg-gray-50 mt-auto">
-                            <div class="grid grid-cols-2 gap-4 text-center">
-                                <div>
-                                    <p class="text-2xl font-bold text-green-600">+250%</p>
-                                    <p class="text-sm text-gray-600">Qualified Leads</p>
-                                </div>
-                                <div>
-                                    <p class="text-2xl font-bold text-green-600">-40%</p>
-                                    <p class="text-sm text-gray-600">Trade Show Spend</p>
-                                </div>
-                            </div>
-                            <blockquote class="mt-6 text-center text-gray-700 italic border-l-4 border-blue-500 pl-4">
-                                "We are engineers, not marketers. Growth Engine gave us the strategy and system to finally turn our expertise into a predictable sales pipeline."
-                            </blockquote>
-                        </div>
-                    </div>
-                    <!-- Case Study 2 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
-                        <div class="p-8">
-                            <img src="https://placehold.co/150x40/000000/FFFFFF?text=Warsaw+Textiles" alt="Company Logo" class="h-8 mb-4">
-                            <p class="font-semibold text-blue-600">Fashion & Textiles | Poland</p>
-                            <div class="mt-4">
-                                <h4 class="font-bold text-lg">Before:</h4>
-                                <p class="text-gray-600 text-sm">90% of revenue came from two major clients. The business was extremely vulnerable.</p>
-                            </div>
-                            <div class="mt-4">
-                                <h4 class="font-bold text-lg">After (9 months with "Growth" package):</h4>
-                                <p class="text-gray-600 text-sm">Diversified their client base by proactively targeting mid-size fashion brands across the EU using outbound dialogues and inbound content.</p>
-                            </div>
-                        </div>
-                        <div class="p-6 bg-gray-50 mt-auto">
-                            <div class="grid grid-cols-2 gap-4 text-center">
-                                <div>
-                                    <p class="text-2xl font-bold text-green-600">+35%</p>
-                                    <p class="text-sm text-gray-600">New EU Clients</p>
-                                </div>
-                                <div>
-                                    <p class="text-2xl font-bold text-green-600">-50%</p>
-                                    <p class="text-sm text-gray-600">Revenue Dependency</p>
-                                </div>
-                            </div>
-                            <blockquote class="mt-6 text-center text-gray-700 italic border-l-4 border-blue-500 pl-4">
-                                "For the first time, we feel in control of our growth. We are no longer just order-takers; we are actively building our future."
-                            </blockquote>
-                        </div>
-                    </div>
-                    <!-- Case Study 3 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
-                        <div class="p-8">
-                            <img src="https://placehold.co/150x40/000000/FFFFFF?text=Alpine+Gifts" alt="Company Logo" class="h-8 mb-4">
-                            <p class="font-semibold text-blue-600">Niche Consumer Goods | Austria</p>
-                            <div class="mt-4">
-                                <h4 class="font-bold text-lg">Before:</h4>
-                                <p class="text-gray-600 text-sm">Struggling to stand out in a crowded market. Constantly pressured on price by distributors.</p>
-                            </div>
-                            <div class="mt-4">
-                                <h4 class="font-bold text-lg">After (12 months with "Foundation" package):</h4>
-                                <p class="text-gray-600 text-sm">Established a strong brand identity through high-quality content, attracting premium distributors and enabling direct-to-retail sales.</p>
-                            </div>
-                        </div>
-                        <div class="p-6 bg-gray-50 mt-auto">
-                            <div class="grid grid-cols-2 gap-4 text-center">
-                                <div>
-                                    <p class="text-2xl font-bold text-green-600">+15%</p>
-                                    <p class="text-sm text-gray-600">Profit Margin</p>
-                                </div>
-                                <div>
-                                    <p class="text-2xl font-bold text-green-600">Top 3</p>
-                                    <p class="text-sm text-gray-600">Google Ranking</p>
-                                </div>
-                            </div>
-                            <blockquote class="mt-6 text-center text-gray-700 italic border-l-4 border-blue-500 pl-4">
-                                "The strategic sessions were a game-changer. We stopped competing on price and started competing on value."
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonial Section -->
+        <!-- 11. Testimonial Section -->
         <section class="py-20">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center">
@@ -853,6 +857,64 @@
 
     <script>
         lucide.createIcons();
+
+        // ROI Calculator Logic
+        const calculateBtn = document.getElementById('calculate-roi-btn');
+        const dealValueInput = document.getElementById('deal-value-input');
+        
+        const roiPercentageEl = document.getElementById('roi-percentage');
+        const projectedRevenueEl = document.getElementById('projected-revenue');
+        const netProfitEl = document.getElementById('net-profit');
+        const roiDetailsEl = document.getElementById('roi-calculation-details');
+        const resultsContainer = document.getElementById('roi-results-container');
+
+        const calculateROI = () => {
+            const dealValue = parseFloat(dealValueInput.value);
+            if (!dealValue || dealValue <= 0) {
+                // Optionally, show an error message
+                return;
+            }
+
+            const investment = 12450;
+            const numberOfDeals = 12;
+            
+            const totalRevenue = dealValue * numberOfDeals;
+            const netProfit = totalRevenue - investment;
+            const roi = (netProfit / investment) * 100;
+
+            // Format numbers for display
+            const formatCurrency = (value) => new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0 }).format(value);
+            
+            // Hide results before updating to re-trigger animation
+            resultsContainer.querySelectorAll('.roi-result').forEach(el => el.classList.remove('visible'));
+
+            setTimeout(() => {
+                roiPercentageEl.textContent = `${roi.toFixed(0)}%`;
+                projectedRevenueEl.textContent = formatCurrency(totalRevenue);
+                netProfitEl.textContent = formatCurrency(netProfit);
+                
+                // Show results with animation
+                resultsContainer.querySelectorAll('.roi-result').forEach(el => el.classList.add('visible'));
+            }, 100); // A small delay to allow the removal of the class to be processed
+        };
+
+        calculateBtn.addEventListener('click', calculateROI);
+        
+        // Also calculate when Enter is pressed in the input field
+        dealValueInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                calculateROI();
+            }
+        });
+
+        // Initial calculation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Make initial results visible
+            setTimeout(() => {
+                 resultsContainer.querySelectorAll('.roi-result').forEach(el => el.classList.add('visible'));
+            }, 100);
+        });
+
     </script>
 </body>
 </html>
