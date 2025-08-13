@@ -50,6 +50,26 @@
             font-size: 12px;
             font-weight: 600;
         }
+        .feature-table th, .feature-table td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+        .feature-table thead th {
+            text-align: center;
+        }
+        .feature-table tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        .feature-table .check-mark {
+            color: #22c55e;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .feature-table .dash-mark {
+            color: #9ca3af;
+            text-align: center;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -215,8 +235,180 @@
             </div>
         </section>
 
-        <!-- Testimonial Section -->
+        <!-- Detailed Feature Comparison Section -->
         <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Compare Features in Detail</h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Find the perfect plan for your business needs.</p>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full feature-table bg-white shadow-lg rounded-lg">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="w-1/4">Feature</th>
+                                <th class="w-1/5">Starter<br><span class="text-sm font-normal text-gray-500">Free</span></th>
+                                <th class="w-1/5">Foundation<br><span class="text-sm font-normal text-gray-500">€500/mo</span></th>
+                                <th class="w-1/5">Growth<br><span class="text-sm font-normal text-gray-500">€1,800/mo</span></th>
+                                <th class="w-1/5">Partnership<br><span class="text-sm font-normal text-gray-500">€3,500/mo</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Strategy & Diagnostics -->
+                            <tr>
+                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Strategy & Diagnostics</td>
+                            </tr>
+                            <tr>
+                                <td>Strategic Self-Diagnostic</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>"Marketing Potential" Report</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Competitive Analysis (3 competitors)</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Content Idea Map</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                             <tr>
+                                <td>Predictive Analysis (Prospecting)</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <!-- Platform & Content -->
+                            <tr>
+                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Platform & Content</td>
+                            </tr>
+                            <tr>
+                                <td>Company Profile & Directory</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>SEO & Content Publishing Tools</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>A/B Testing for CTAs</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <!-- Lead Generation & CRM -->
+                            <tr>
+                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Lead Generation & CRM</td>
+                            </tr>
+                            <tr>
+                                <td>Built-in CRM</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Website Visitor Identification</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Automatic Lead Scoring</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <!-- Sales & Automation -->
+                             <tr>
+                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Sales & Automation</td>
+                            </tr>
+                            <tr>
+                                <td>Sales Proposal Builder</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                             <tr>
+                                <td>Accounting Software Integration</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Client Retention Tools</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <!-- Expert Support -->
+                            <tr>
+                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Expert Support</td>
+                            </tr>
+                            <tr>
+                                <td>"Strategy Kickstart" Session</td>
+                                <td class="dash-mark">-</td>
+                                <td class="text-center font-semibold">€2,500</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Quarterly Strategy Session</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly Sales Growth Session</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Direct Expert Access (Messenger)</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="dash-mark">-</td>
+                                <td class="check-mark">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonial Section -->
+        <section class="py-20">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center">
                      <div class="flex justify-center mb-4">
