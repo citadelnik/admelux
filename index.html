@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
@@ -50,33 +50,10 @@
             font-size: 12px;
             font-weight: 600;
         }
-        .feature-table th, .feature-table td {
-            padding: 1rem 1.5rem;
-        }
-        .feature-table th {
-             text-align: left;
-        }
-        .feature-table thead th {
-            text-align: center;
-        }
-        .feature-table tbody tr:nth-child(even) {
-            background-color: #f9fafb;
-        }
-        .feature-table .check-mark {
-            color: #22c55e;
-            font-weight: bold;
-            font-size: 1.5rem;
-            text-align: center;
-        }
-        .feature-table .dash-mark {
-            color: #9ca3af;
-            text-align: center;
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-gray-900">
@@ -88,9 +65,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section class="py-20 md:py-32 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
@@ -108,7 +83,6 @@
             </div>
         </section>
 
-        <!-- Problem Section -->
         <section class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -116,7 +90,6 @@
                     <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">This is a common pain point for Europe's best manufacturers.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Pain Point 1 -->
                     <div class="bg-white p-6 rounded-lg shadow-sm">
                         <div class="flex items-center">
                             <i data-lucide="plane-takeoff" class="w-8 h-8 text-red-500"></i>
@@ -124,7 +97,6 @@
                         </div>
                         <p class="mt-4 text-gray-600">Huge budgets, chaotic contact management, and a low, unpredictable return on investment.</p>
                     </div>
-                    <!-- Pain Point 2 -->
                     <div class="bg-white p-6 rounded-lg shadow-sm">
                         <div class="flex items-center">
                             <i data-lucide="users" class="w-8 h-8 text-red-500"></i>
@@ -132,7 +104,6 @@
                         </div>
                         <p class="mt-4 text-gray-600">Growth is based on word-of-mouth — it's slow, impossible to scale, and unpredictable.</p>
                     </div>
-                    <!-- Pain Point 3 -->
                     <div class="bg-white p-6 rounded-lg shadow-sm">
                         <div class="flex items-center">
                             <i data-lucide="wifi-off" class="w-8 h-8 text-red-500"></i>
@@ -144,7 +115,6 @@
             </div>
         </section>
 
-        <!-- Solution Section -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center">
@@ -164,7 +134,6 @@
             </div>
         </section>
         
-        <!-- Packages Section -->
         <section id="packages" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -173,7 +142,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 items-start">
-                    <!-- Package 1: Starter -->
                     <div class="package-card bg-white p-8 rounded-xl h-full flex flex-col">
                         <h4 class="text-2xl font-bold text-gray-900">Starter</h4>
                         <p class="text-gray-500 mt-1">Diagnostic</p>
@@ -189,7 +157,6 @@
                         <a href="#" class="mt-8 cta-button w-full text-center bg-gray-200 text-gray-800 font-bold py-3 rounded-lg hover:bg-gray-300">Start for Free</a>
                     </div>
 
-                    <!-- Package 2: Foundation -->
                     <div class="package-card bg-white p-8 rounded-xl h-full flex flex-col">
                         <h4 class="text-2xl font-bold text-gray-900">Foundation</h4>
                         <p class="text-gray-500 mt-1">Traffic</p>
@@ -201,12 +168,11 @@
                             <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold">Competitor Analysis (5 Companies)</span></li>
                             <li class="flex items-start"><i data-lucide="message-square" class="w-5 h-5 text-gray-500 mr-3 mt-1 flex-shrink-0"></i><span>10 Outbound Dialogues / mo</span></li>
                             <li class="flex items-start"><i data-lucide="package" class="w-5 h-5 text-gray-500 mr-3 mt-1 flex-shrink-0"></i><span>Up to 10 Products</span></li>
-                             <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold text-blue-600">Mandatory "Strategy Kickstart" with an expert (€2,500 one-time)</span></li>
+                             <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0"></i><span class="font-bold text-blue-600">Mandatory "Strategy Kickstart" with an expert (€950 one-time)</span></li>
                         </ul>
                         <a href="#" class="mt-8 cta-button w-full text-center bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700">Request a Demo</a>
                     </div>
 
-                    <!-- Package 3: Growth -->
                     <div class="package-card bg-white p-8 rounded-xl h-full flex flex-col highlight-package">
                         <div class="highlight-badge">Popular</div>
                         <h4 class="text-2xl font-bold text-gray-900">Growth</h4>
@@ -224,7 +190,6 @@
                         <a href="#" class="mt-8 cta-button w-full text-center bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700">Request a Demo</a>
                     </div>
 
-                    <!-- Package 4: Partnership -->
                     <div class="package-card bg-gray-900 text-white p-8 rounded-xl h-full flex flex-col">
                         <h4 class="text-2xl font-bold">Partnership</h4>
                         <p class="text-gray-400 mt-1">Sales</p>
@@ -244,216 +209,203 @@
             </div>
         </section>
 
-        <!-- Detailed Feature Comparison Section -->
-        <section class="py-20 bg-white">
+        <section id="feature-comparison" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Detailed Feature Comparison</h3>
                     <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Find the perfect plan for your business needs.</p>
                 </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full feature-table bg-white shadow-lg rounded-lg">
-                        <thead>
-                            <tr class="border-b border-gray-200">
-                                <th class="w-1/4">Feature</th>
-                                <th class="w-1/5">Starter<br><span class="text-sm font-normal text-gray-500">Free</span></th>
-                                <th class="w-1/5">Foundation<br><span class="text-sm font-normal text-gray-500">€295/mo</span></th>
-                                <th class="w-1/5">Growth<br><span class="text-sm font-normal text-gray-500">€950/mo</span></th>
-                                <th class="w-1/5">Partnership<br><span class="text-sm font-normal text-gray-500">€3,500/mo</span></th>
+                
+                <div class="overflow-x-auto bg-white rounded-xl shadow-xl border border-gray-200">
+                    <table class="w-full whitespace-nowrap">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="text-left font-semibold text-gray-900 p-6">Feature</th>
+                                <th class="w-40 text-center font-semibold text-gray-900 p-6">Starter<p class="text-sm font-normal text-gray-500">Free</p></th>
+                                <th class="w-40 text-center font-semibold text-gray-900 p-6">Foundation<p class="text-sm font-normal text-gray-500">€295/mo</p></th>
+                                <th class="w-40 text-center font-semibold text-gray-900 p-6 border-l border-r border-blue-200 bg-blue-50">Growth<p class="text-sm font-normal text-blue-700">€950/mo</p></th>
+                                <th class="w-40 text-center font-semibold text-gray-900 p-6">Partnership<p class="text-sm font-normal text-gray-500">€3,500/mo</p></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Strategic Foundation -->
-                            <tr>
-                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Strategic Foundation</td>
+                            <tr class="bg-gray-100"><td colspan="5" class="p-3 font-bold text-gray-700">Strategic Foundation</td></tr>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Clear Strategic Positioning</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Clear Strategic Positioning</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Unique Differentiation</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Unique Differentiation</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                             <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Formulated Value Proposition</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Formulated Value Proposition</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+
+                            <tr class="bg-gray-100"><td colspan="5" class="p-3 font-bold text-gray-700">Diagnostics & Analytics</td></tr>
+                             <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Strategic Self-Diagnostic</td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <!-- Diagnostics & Analytics -->
-                            <tr>
-                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Diagnostics & Analytics</td>
+                             <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">"Marketing Potential" Report</td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Strategic Self-Diagnostic</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Competitor Analysis</td>
+                                <td class="p-4 text-center font-semibold">3 Companies</td>
+                                <td class="p-4 text-center font-semibold">5 Companies</td>
+                                <td class="p-4 text-center font-semibold border-l border-r border-blue-200 bg-blue-50">10 Companies</td>
+                                <td class="p-4 text-center font-semibold text-blue-600">Full Analysis</td>
                             </tr>
-                            <tr>
-                                <td>"Marketing Potential" Report</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                             <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Content Idea Map</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Competitor Analysis</td>
-                                <td class="text-center font-semibold">3 Companies</td>
-                                <td class="text-center font-semibold">5 Companies</td>
-                                <td class="text-center font-semibold">10 Companies</td>
-                                <td class="text-center font-semibold">Full Analysis</td>
+                             <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Predictive Analysis (Prospecting)</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Content Idea Map</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+
+                            <tr class="bg-gray-100"><td colspan="5" class="p-3 font-bold text-gray-700">Platform & Content</td></tr>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Company Profile & Directory</td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                             <tr>
-                                <td>Predictive Analysis (Prospecting)</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Complete, Trustworthy Webpage</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <!-- Platform & Content -->
-                            <tr>
-                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Platform & Content</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">SEO & Content Publishing (24 EU lang)</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Company Profile & Directory</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                             <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">A/B Testing for CTAs</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Complete, Trustworthy Webpage</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                             <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Number of Products to Publish</td>
+                                <td class="p-4 text-center font-semibold">5</td>
+                                <td class="p-4 text-center font-semibold">10</td>
+                                <td class="p-4 text-center font-semibold border-l border-r border-blue-200 bg-blue-50">50</td>
+                                <td class="p-4 text-center font-semibold">100+</td>
                             </tr>
-                            <tr>
-                                <td>SEO & Content Publishing (24 EU lang)</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+
+                            <tr class="bg-gray-100"><td colspan="5" class="p-3 font-bold text-gray-700">Lead Generation & CRM</td></tr>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Built-in CRM</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>A/B Testing for CTAs</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Website Visitor Identification</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                             <tr>
-                                <td>Number of Products to Publish</td>
-                                <td class="text-center font-semibold">5</td>
-                                <td class="text-center font-semibold">10</td>
-                                <td class="text-center font-semibold">50</td>
-                                <td class="text-center font-semibold">100+</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Automatic Lead Scoring</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <!-- Lead Generation & CRM -->
-                            <tr>
-                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Lead Generation & CRM</td>
+
+                            <tr class="bg-gray-100"><td colspan="5" class="p-3 font-bold text-gray-700">Sales & Automation</td></tr>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Outbound Dialogues per month</td>
+                                <td class="p-4 text-center font-semibold">0</td>
+                                <td class="p-4 text-center font-semibold">10</td>
+                                <td class="p-4 text-center font-semibold border-l border-r border-blue-200 bg-blue-50">50</td>
+                                <td class="p-4 text-center font-semibold text-blue-600">Unlimited</td>
                             </tr>
-                            <tr>
-                                <td>Built-in CRM</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Sales Proposal Builder</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Website Visitor Identification</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Accounting Software Integration</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Automatic Lead Scoring</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Client Retention Tools</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <!-- Sales & Automation -->
-                             <tr>
-                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Sales & Automation</td>
+
+                            <tr class="bg-gray-100"><td colspan="5" class="p-3 font-bold text-gray-700">Expert Support</td></tr>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">"Strategy Kickstart" Session</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center font-semibold">€2,500</td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Outbound Dialogues per month</td>
-                                <td class="text-center font-semibold">0</td>
-                                <td class="text-center font-semibold">10</td>
-                                <td class="text-center font-semibold">50</td>
-                                <td class="text-center font-semibold">Unlimited</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Quarterly Strategy Session</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                            <tr>
-                                <td>Sales Proposal Builder</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <td class="p-4 font-medium text-gray-800">Monthly Sales Growth Session</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
-                             <tr>
-                                <td>Accounting Software Integration</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Client Retention Tools</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                            </tr>
-                            <!-- Expert Support -->
-                            <tr>
-                                <td colspan="5" class="bg-gray-100 font-bold text-gray-800">Expert Support</td>
-                            </tr>
-                            <tr>
-                                <td>"Strategy Kickstart" Session</td>
-                                <td class="dash-mark">-</td>
-                                <td class="text-center font-semibold">€2,500</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Quarterly Strategy Session</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                                <td class="check-mark">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Monthly Sales Growth Session</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Direct Expert Access (Messenger)</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="dash-mark">-</td>
-                                <td class="check-mark">✓</td>
+                            <tr class="odd:bg-white even:bg-gray-50">
+                                <td class="p-4 font-medium text-gray-800">Direct Expert Access (Messenger)</td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center border-l border-r border-blue-200 bg-blue-50"><i data-lucide="minus" class="w-5 h-5 text-gray-400 mx-auto"></i></td>
+                                <td class="p-4 text-center"><i data-lucide="check" class="w-6 h-6 text-green-500 mx-auto"></i></td>
                             </tr>
                         </tbody>
                     </table>
@@ -461,8 +413,224 @@
             </div>
         </section>
 
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">How We Find <span class="gradient-text">Your</span> Ideal Clients: Our 4-Step Process</h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">We don't just provide tools; we execute a proven methodology to generate tangible results for your specific business.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto bg-blue-100 rounded-full text-blue-600">
+                                <i data-lucide="compass" class="w-10 h-10"></i>
+                            </div>
+                        </div>
+                        <h4 class="mt-6 text-xl font-bold">Step 1: Deep Strategy & ICP Definition</h4>
+                        <p class="mt-2 text-gray-600">It all starts with our mandatory "Strategy Kickstart" session. We work with you to define your Ideal Customer Profile (ICP) – who they are, their pain points, and where to find them. This is the foundation for all future success.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto bg-blue-100 rounded-full text-blue-600">
+                                <i data-lucide="magnet" class="w-10 h-10"></i>
+                            </div>
+                        </div>
+                        <h4 class="mt-6 text-xl font-bold">Step 2: Attracting Active Buyers (Inbound)</h4>
+                        <p class="mt-2 text-gray-600">We build your trustworthy webpage and use our SEO & Content tools to publish expert articles. When a potential client searches "reliable hydraulic components supplier," they find you, not your competitors. These are warm, high-intent leads.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto bg-blue-100 rounded-full text-blue-600">
+                                <i data-lucide="send" class="w-10 h-10"></i>
+                            </div>
+                        </div>
+                        <h4 class="mt-6 text-xl font-bold">Step 3: Proactive Prospecting (Outbound)</h4>
+                        <p class="mt-2 text-gray-600">We don't wait for clients to come to us. Using your ICP, our platform identifies high-potential companies. We then use the "Outbound Dialogues" feature to start meaningful conversations with key decision-makers, creating new opportunities.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto bg-blue-100 rounded-full text-blue-600">
+                                <i data-lucide="filter" class="w-10 h-10"></i>
+                            </div>
+                        </div>
+                        <h4 class="mt-6 text-xl font-bold">Step 4: Nurturing & Conversion</h4>
+                        <p class="mt-2 text-gray-600">All leads, both inbound and outbound, are captured in our built-in CRM. The Automatic Lead Scoring system prioritizes the hottest prospects, so your sales team knows exactly who to focus on to close deals faster.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Testimonial Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Transparent Costs vs. Predictable ROI</h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">An example based on our popular "Growth" package.</p>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-gray-200">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-900 flex items-center">
+                                <i data-lucide="coins" class="w-8 h-8 text-blue-600 mr-3"></i>
+                                Your Investment
+                            </h4>
+                            <div class="mt-6 space-y-4">
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <p class="font-semibold">One-Time "Strategy Kickstart"</p>
+                                    <p class="text-2xl font-bold text-blue-600">€950</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <p class="font-semibold">"Growth" Package Monthly Fee</p>
+                                    <p class="text-2xl font-bold text-blue-600">€950</p>
+                                </div>
+                                <div class="mt-6 pt-6 border-t border-gray-200">
+                                    <p class="font-bold text-lg">Total Investment:</p>
+                                    <p class="text-xl"><span class="font-bold">6 Months:</span> €6,650</p>
+                                    <p class="text-xl"><span class="font-bold">12 Months:</span> €12,350</p>
+                                    <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                                        <p class="font-bold text-lg text-green-800">Total ROI (12-Month Projection)</p>
+                                        <p class="text-sm text-gray-600">Based on conservative industry averages*</p>
+                                        <p class="text-4xl font-extrabold text-green-600 mt-2">2,329%</p>
+                                        <p class="text-xs text-gray-500 mt-2">*Calculation: ( (12 deals x €25,000 avg. value) - €12,350 investment ) / €12,350 investment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-900 flex items-center">
+                                <i data-lucide="bar-chart-2" class="w-8 h-8 text-green-500 mr-3"></i>
+                                Your Expected Return
+                            </h4>
+                            <div class="mt-6 space-y-6">
+                                <div>
+                                    <p class="font-bold text-lg">Months 1-3: Foundation Building</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Strategy defined, ICP created</li>
+                                        <li>Trustworthy webpage launched</li>
+                                        <li>First expert content published & SEO started</li>
+                                        <li><span class="font-semibold text-green-600">Result:</span> Increased website traffic & brand visibility.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-lg">Months 4-6: Gaining Momentum</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Consistent flow of inbound & outbound dialogues</li>
+                                        <li>Lead scoring system identifies hot prospects</li>
+                                        <li><span class="font-semibold text-green-600">Result:</span> 5-10 qualified leads per month & first sales meetings scheduled.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-lg">Months 7-12: Achieving Growth & ROI</p>
+                                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                                        <li>Predictable lead generation pipeline</li>
+                                        <li>Optimized sales process in the CRM</li>
+                                        <li><span class="font-semibold text-green-600">Result:</span> 10+ qualified leads per month, first deals closed, and a clear, positive ROI.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Proof of Concept: Real Results for EU Manufacturers</h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Our strategy-first approach delivers measurable growth across industries.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                        <div class="p-8">
+                            <img src="https://placehold.co/150x40/000000/FFFFFF?text=Müller+Maschinenbau" alt="Company Logo" class="h-8 mb-4">
+                            <p class="font-semibold text-blue-600">Mechanical Engineering | Germany</p>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">Before:</h4>
+                                <p class="text-gray-600 text-sm">Entire marketing budget spent on Hannover Messe with unpredictable lead quality. No online presence.</p>
+                            </div>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">After (12 months with "Growth" package):</h4>
+                                <p class="text-gray-600 text-sm">Became a recognized online expert. Leads now come consistently through their website, reducing reliance on trade shows.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-gray-50 mt-auto">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">+250%</p>
+                                    <p class="text-sm text-gray-600">Qualified Leads</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">-40%</p>
+                                    <p class="text-sm text-gray-600">Trade Show Spend</p>
+                                </div>
+                            </div>
+                            <blockquote class="mt-6 text-center text-gray-700 italic border-l-4 border-blue-500 pl-4">
+                                "We are engineers, not marketers. Growth Engine gave us the strategy and system to finally turn our expertise into a predictable sales pipeline."
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                        <div class="p-8">
+                            <img src="https://placehold.co/150x40/000000/FFFFFF?text=Warsaw+Textiles" alt="Company Logo" class="h-8 mb-4">
+                            <p class="font-semibold text-blue-600">Fashion & Textiles | Poland</p>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">Before:</h4>
+                                <p class="text-gray-600 text-sm">90% of revenue came from two major clients. The business was extremely vulnerable.</p>
+                            </div>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">After (9 months with "Growth" package):</h4>
+                                <p class="text-gray-600 text-sm">Diversified their client base by proactively targeting mid-size fashion brands across the EU using outbound dialogues and inbound content.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-gray-50 mt-auto">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">+35%</p>
+                                    <p class="text-sm text-gray-600">New EU Clients</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">-50%</p>
+                                    <p class="text-sm text-gray-600">Revenue Dependency</p>
+                                </div>
+                            </div>
+                            <blockquote class="mt-6 text-center text-gray-700 italic border-l-4 border-blue-500 pl-4">
+                                "For the first time, we feel in control of our growth. We are no longer just order-takers; we are actively building our future."
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                        <div class="p-8">
+                            <img src="https://placehold.co/150x40/000000/FFFFFF?text=Alpine+Gifts" alt="Company Logo" class="h-8 mb-4">
+                            <p class="font-semibold text-blue-600">Niche Consumer Goods | Austria</p>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">Before:</h4>
+                                <p class="text-gray-600 text-sm">Struggling to stand out in a crowded market. Constantly pressured on price by distributors.</p>
+                            </div>
+                            <div class="mt-4">
+                                <h4 class="font-bold text-lg">After (12 months with "Foundation" package):</h4>
+                                <p class="text-gray-600 text-sm">Established a strong brand identity through high-quality content, attracting premium distributors and enabling direct-to-retail sales.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-gray-50 mt-auto">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">+15%</p>
+                                    <p class="text-sm text-gray-600">Profit Margin</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-green-600">Top 3</p>
+                                    <p class="text-sm text-gray-600">Google Ranking</p>
+                                </div>
+                            </div>
+                            <blockquote class="mt-6 text-center text-gray-700 italic border-l-4 border-blue-500 pl-4">
+                                "The strategic sessions were a game-changer. We stopped competing on price and started competing on value."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="py-20">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center">
@@ -480,7 +648,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white">
         <div class="container mx-auto px-6 py-12">
             <div class="text-center">
