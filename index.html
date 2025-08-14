@@ -60,6 +60,18 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Animation for new hero icons */
+        .hero-icon {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .hero-icon:nth-child(2) { animation-delay: 1.5s; }
+        .hero-icon:nth-child(3) { animation-delay: 3s; }
+        .hero-icon:nth-child(4) { animation-delay: 4.5s; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -78,7 +90,7 @@
 
     <!-- Main Content -->
     <main>
-        <!-- 1. Hero Section -->
+        <!-- 1. Hero Section (Original) -->
         <section class="py-20 md:py-32 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
@@ -92,6 +104,53 @@
                         Start with a Free Diagnosis
                     </a>
                     <p class="mt-4 text-sm text-gray-500">No risk. No commitment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Hero Section (New Variant) -->
+        <section class="py-20 md:py-32 bg-gray-800 text-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                            Growth Engine: Connect your manufacturing to the <span class="text-blue-400">future of sales.</span>
+                        </h2>
+                        <p class="mt-6 text-lg md:text-xl text-gray-300">
+                            We are the first platform in Europe that transforms your marketing and sales into an intelligent, self-learning system using the principles of Industry 4.0.
+                        </p>
+                        <blockquote class="mt-8 text-md text-gray-300 bg-gray-700/50 p-4 rounded-lg border-l-4 border-blue-500">
+                           "We don't sell marketing. We sell optimization and automation of your most important business process - revenue generation."
+                        </blockquote>
+                        <div class="mt-10">
+                            <a href="#packages" class="cta-button bg-blue-600 text-white font-bold px-10 py-4 rounded-lg text-lg shadow-xl hover:bg-blue-500">
+                                Discover the System
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Visual Representation -->
+                    <div class="hidden md:flex justify-center items-center">
+                        <div class="relative w-80 h-80">
+                            <!-- Central Icon -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-36 h-36 bg-blue-600 rounded-full text-white shadow-2xl">
+                                <i data-lucide="factory" class="w-16 h-16"></i>
+                            </div>
+                            <!-- Surrounding Icons -->
+                            <div class="hero-icon absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 p-4 bg-white text-gray-800 rounded-full shadow-lg">
+                                 <i data-lucide="brain-circuit" class="w-10 h-10 text-blue-600" title="AI-Powered System"></i>
+                            </div>
+                             <div class="hero-icon absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4 p-4 bg-white text-gray-800 rounded-full shadow-lg">
+                                 <i data-lucide="line-chart" class="w-10 h-10 text-green-500" title="Sales Growth"></i>
+                            </div>
+                            <div class="hero-icon absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 p-4 bg-white text-gray-800 rounded-full shadow-lg">
+                                 <i data-lucide="users" class="w-10 h-10 text-blue-600" title="Client Attraction"></i>
+                            </div>
+                            <div class="hero-icon absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 p-4 bg-white text-gray-800 rounded-full shadow-lg">
+                                 <i data-lucide="target" class="w-10 h-10 text-red-500" title="Targeted Automation"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -513,7 +572,7 @@
                             <h4 class="ml-4 text-2xl font-bold text-gray-900">Local Market Expertise</h4>
                         </div>
                         <p class="mt-4 text-gray-600">We know where European buyers look for suppliers. Our strategy includes platforms that others ignore.</p>
-                        <p class="mt-4 font-semibold text-gray-800">We also place and optimize your profile on all key B2B platforms, such as:</p>
+                        <p class="mt-4 font-semibold text-gray-800">We place and optimize your profile on key B2B marketplaces:</p>
                         <div class="mt-4 flex flex-wrap items-center gap-6">
                              <img src="https://placehold.co/150x40/FF6700/FFFFFF?text=Europages" alt="Europages Logo" class="h-10" title="Europages">
                              <img src="https://placehold.co/130x40/333333/FFFFFF?text=IndustryStock" alt="IndustryStock Logo" class="h-10" title="IndustryStock">
@@ -1016,4 +1075,3 @@
     </script>
 </body>
 </html>
-
